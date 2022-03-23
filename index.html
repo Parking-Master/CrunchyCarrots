@@ -1,1 +1,149 @@
-
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+    <title>Home | CrunchyCarrots - Simple recipes for small animals!</title>
+    <script src="/js/keep.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="/styles/index.css" />
+    <style>
+      a.header-btn + .custom-anchor-tt {
+        display: none !important;
+      }
+      .custom-anchor-tt {
+        font-style: normal !important;
+      }
+      a.button {
+        user-select: none !important;
+        -moz-user-select: none !important;
+        -webkit-user-select: none !important;
+      }
+      .nav {
+        z-index: 100;
+      }
+      html, body, .wrapper {
+        overflow-x: hidden !important;
+      }
+      .notification button {
+        background: transparent;
+        padding: none !important;
+        border: none !important;
+        outline: none !important;
+        text-decoration: underline;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <a href="/">
+      <div class="icon-bar" onclick="location.href = '/';">
+        <a href="/">
+          <i class="fa fa-envelope" style="color:inherit!important;"></i>
+        </a>
+      </div>
+    </a>
+    <div class="nav">
+      <a href="/" class="button" style="position:relative;left:10px;margin:0!important;width:100px;margin-left:20px;margin-right:-20px;">Home</a>&ThickSpace;&ThickSpace;&ThickSpace;&ThickSpace;<a href="https://bit.ly/CrunchyCarrots-Recipes" class="button" style="position:relative;left:10px;margin:0!important;width:100px;margin-left:25px;margin-right:-20px;">Recipes</a>&ThickSpace;&ThickSpace;&ThickSpace;&ThickSpace;<a href="https://bit.ly/CrunchyCarrots-Recipes" class="button expand" style="position:relative;left:10px;margin:0!important;width:100px;margin-left:25px;margin-right:-20px;">Recipes</a>
+    </div>
+    <div class="wrapper">
+      <div class="header">
+        <div class="fake_typing_animation">
+          <h1 style="font-weight:500;color:#fff;">
+            Realistic miniature treats<br>
+            for any Guinea Pig
+            <img class="header-icon" src="/images/oliver.jpeg" style="transition:opacity .4s;opacity:0;" />
+            <b style="position: absolute; left: 61.5%; top: 254px; font-size: 20px; letter-spacing: 1px;">~ <i>Oliver</i></b>
+            <script>
+              window.addEventListener("load", function() { setTimeout(() => document.querySelector(".header-icon").style.opacity = "1", 10); });
+            </script>
+          </h1>
+          <br>
+          <br>
+          <a class="button header-btn" href="https://bit.ly/CrunchyCarrots-Recipes" style="box-shadow:none!important;color:#444!important;text-shadow:none!important;">View Recipes</a>
+        </div>
+      </div>
+      <div class="body">
+        <h2>What animals does CrunchyCarrots make treats for?</h2>
+        <div style="position:relative;left:43.5%;">
+          <ul style="position:relative;font-size:19px;letter-spacing:.2px;font-weight:600;">
+            <li>Guinea Pigs</li>
+            <li>Rats</li>
+            <li>Hamsters</li>
+            <li>Gerbils</li>
+            <li>Mice</li>
+          </ul>
+        </div>
+        <h2>Meet The Pigs</h2>
+        <p class="-center">
+          <div style="position: relative; width: 20%; left: 40%; margin-left: -10%; display: inline-block;">
+            <img class="carousel" src="/images/theodore.jpeg" style="width: 80%;" />
+            <br>
+            Theodore
+          </div>
+          <div style="position: relative; width: 20%; left: 50%; margin-left: -10%; display: inline-block;">
+            <img class="carousel" src="/images/oliver.jpeg" style="width: 80%;" />
+            <br>
+            Oliver
+          </div>
+        </p>
+        <br>
+      </div>
+      <div class="notification" style="margin-top:150px;margin-bottom:-150px;">
+        <h1>The Piggie's favorites</h1>
+        <i>Oliver's Kitchen & Theodore Reviews</i>
+        <br>
+        <p class="-center">
+          Not only will <b>CrunchyCarrots</b> have new recipes
+          every Saturday, but ...<button>View more</button>
+        </p>
+      </div>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <div class="notification" style="margin-top:150px;margin-bottom:-150px;">
+        <h1>What's cooking?</h1>
+        <p class="-center">
+          <ul>
+            <li>Gourmet mini treats</li>
+            <li>Gourmet mini meals</li>
+            <li>Small treats</li>
+            <li>Reward treats</li>
+            <li>Salads</li>
+            <li>World's first treats</li>
+            <li>Quick treats</li>
+          </ul>
+        </p>
+      </div>
+      <div class="footer" style="padding-bottom: 10px; padding-top: 0px;">
+        <h1>YouTube</h1>
+        <p class="-center">
+          All main/weekly videos are uploaded onto YouTube.<br>
+          Make sure to subscribe for more content!
+          <br>
+          <a href="https://bit.ly/CrunchyCarrots-Subscribe" class="button" style="box-shadow:none!important;color:#444!important;text-shadow:none!important;margin-top:30px;">Subscribe</a>
+        </p>
+      </div>
+    </div>
+    <script>
+      document.querySelector(".notification").querySelector("button").addEventListener("click", function() {
+        this.parentElement.innerHTML = this.parentElement.innerHTML.replace("...<button>View more</button>", " CrunchyCarrots<br>features Theodore Reviews & Oliver's Kitchen sometimes instead of the default videos.");
+      });
+      document.querySelector(".nav").addEventListener("mouseover", function() {
+        setTimeout(() => {
+          this.querySelector(".expand").style = "visibility:visible!important;position:relative;left:10px;margin:0!important;width:100px;margin-left:25px;margin-right:-20px;";
+        }, 200);
+      });
+      document.querySelector(".nav").addEventListener("mouseout", function() {
+        this.querySelector(".expand").style = "visibility:hidden!important;position:relative;left:10px;margin:0!important;width:100px;margin-left:25px;margin-right:-20px;";
+      });
+    </script>
+    <script src="https://cdn.websitepolicies.io/lib/cookieconsent/1.0.3/cookieconsent.min.js" defer></script>
+    <script>window.addEventListener("load",function(){window.wpcc.init({"colors":{"popup":{"background":"#4d4d4d","text":"#ffffff","border":"#656565"},"button":{"background":"#555555","text":"#ffffff"}},"position":"bottom-right","fontsize":"small","corners":"small","padding":"none","content":{"link":" ","button":"Close"}})});</script>
+    <script src="https://cdn.jsdelivr.net/gh/Parking-Master/Custom-Link-Tooltips@master/index.js"></script>
+  </body>
+</html>
