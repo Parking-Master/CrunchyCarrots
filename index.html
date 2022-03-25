@@ -34,25 +34,98 @@
         text-decoration: underline;
         cursor: pointer;
       }
+      @media only screen and (max-width: 1100px) {
+        .header-icon {
+          width: 20%;
+          left: 50%;
+        }
+      }
+      @media only screen and (max-width: 824px) {
+        .header .fake_typing_animation > h1 {
+          font-size: 20px;
+          margin-left: 0;
+        }
+      }
+      @media only screen and (max-width: 604px) {
+        .header-icon {
+          left: 46%;
+        }
+      }
+      @media only screen and (max-width: 1100px) {
+        .header-icon {
+          left: 42%;
+        }
+        .header .fake_typing_animation > h1 {
+          font-size: 20px;
+          position: relative;
+          margin-left: 0;
+          padding-right: 150px;
+        }
+        .header {
+          padding: 0;
+        }
+      }
+      @media only screen and (max-width: 360px) {
+        .nav {
+          width: 100%;
+          border-radius: 0 !important;
+          height: 40px;
+        }
+        .nav .button {
+          position: relative;
+          transform: scale(0.9);
+          margin-left: 0 !important;
+          margin-right: 0 !important;
+        }
+        .icon-bar {
+          position: fixed;
+          left: 80%;
+          transform: scale(0.78);
+          margin-top: -2px;
+        }
+      }
+      @media only screen and (max-width: 345px) {
+        .custom-anchor-tt {
+          visibility: hidden;
+        }
+      }
+      @media only screen and (max-width: 299px) {
+        .icon-bar {
+          visibility: hidden;
+        }
+      }
+      @media only screen and (max-width: 250px) {
+        .nav {
+          visibility: hidden;
+        }
+      }
+      @media only screen and (max-width: 210px) {
+        .header-icon {
+          visibility: hidden;
+        }
+      }
+      @media only screen and (max-width: 150px) {
+        body {
+          display: none;
+        }
+      }
     </style>
   </head>
   <body>
-    <a href="/">
       <div class="icon-bar" onclick="location.href = '/';">
         <a href="/">
           <i class="fa fa-envelope" style="color:inherit!important;"></i>
         </a>
       </div>
-    </a>
     <div class="nav">
-      <a href="/" class="button" style="position:relative;left:10px;margin:0!important;width:100px;margin-left:20px;margin-right:-20px;">Home</a>&ThickSpace;&ThickSpace;&ThickSpace;&ThickSpace;<a href="https://bit.ly/CrunchyCarrots-Recipes" class="button" style="position:relative;left:10px;margin:0!important;width:100px;margin-left:25px;margin-right:-20px;">Recipes</a>&ThickSpace;&ThickSpace;&ThickSpace;&ThickSpace;<a href="https://bit.ly/CrunchyCarrots-Recipes" class="button expand" style="position:relative;left:10px;margin:0!important;width:100px;margin-left:25px;margin-right:-20px;">Recipes</a>
+      <a href="/" class="button" style="position:relative;left:10px;margin:0!important;width:100px;margin-left:20px;margin-right:-20px;">Home</a>&ThickSpace;&ThickSpace;&ThickSpace;&ThickSpace;<a href="https://about.crunchycarrots.tk" class="button" style="position:relative;left:10px;margin:0!important;width:100px;margin-left:25px;margin-right:-20px;">About</a>
     </div>
     <div class="wrapper">
       <div class="header">
         <div class="fake_typing_animation">
           <h1 style="font-weight:500;color:#fff;">
-            Realistic miniature treats<br>
-            for any Guinea Pig
+            Miniature treats<br>
+            for any small pet
             <img class="header-icon" src="/images/oliver.jpeg" style="transition:opacity .4s;opacity:0;" />
             <b style="position: absolute; left: 61.5%; top: 254px; font-size: 20px; letter-spacing: 1px;">~ <i>Oliver</i></b>
             <script>
@@ -65,14 +138,15 @@
         </div>
       </div>
       <div class="body">
-        <h2>What animals does CrunchyCarrots make treats for?</h2>
-        <div style="position:relative;left:43.5%;">
+        <h2>What animals does CrunchyCarrots support?</h2>
+        <div style="text-align: center;">
           <ul style="position:relative;font-size:19px;letter-spacing:.2px;font-weight:600;">
             <li>Guinea Pigs</li>
             <li>Rats</li>
             <li>Hamsters</li>
             <li>Gerbils</li>
-            <li>Mice</li>
+            <li>Mice</li><br>
+            ...
           </ul>
         </div>
         <h2>Meet The Pigs</h2>
@@ -130,16 +204,11 @@
       </div>
     </div>
     <script>
+      if (screen.width <= 360) {
+        document.querySelector(".nav").innerHTML = document.querySelector(".nav").innerHTML.replace("        ", "");
+      }
       document.querySelector(".notification").querySelector("button").addEventListener("click", function() {
         this.parentElement.innerHTML = this.parentElement.innerHTML.replace("...<button>View more</button>", " CrunchyCarrots<br>features Theodore Reviews & Oliver's Kitchen sometimes instead of the default videos.");
-      });
-      document.querySelector(".nav").addEventListener("mouseover", function() {
-        setTimeout(() => {
-          this.querySelector(".expand").style = "visibility:visible!important;position:relative;left:10px;margin:0!important;width:100px;margin-left:25px;margin-right:-20px;";
-        }, 200);
-      });
-      document.querySelector(".nav").addEventListener("mouseout", function() {
-        this.querySelector(".expand").style = "visibility:hidden!important;position:relative;left:10px;margin:0!important;width:100px;margin-left:25px;margin-right:-20px;";
       });
     </script>
     <script src="https://cdn.websitepolicies.io/lib/cookieconsent/1.0.3/cookieconsent.min.js" defer></script>
