@@ -167,13 +167,10 @@ b {
   height: 50px;
   z-index: 10;
   border-bottom-left-radius: 20px;
-  transition: width .1s;
+  transition: background 1s;
 }
 .nav:hover {
-  width: 500px;
-}
-.nav:not(:hover) .expand {
-  visibility: hidden !important;
+  background: #eee;
 }
 p.-center {
   text-align: center;
